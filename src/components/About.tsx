@@ -14,11 +14,11 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="bg-brand-blue-50 rounded-3xl overflow-hidden p-4 sm:p-6 relative z-10 border border-brand-blue-100">
+            <div className="bg-brand-blue-50 rounded-3xl overflow-hidden p-3 sm:p-6 relative z-10 border border-brand-blue-100">
               <img
                 src="/src/assets/images/home_appliances_1781589869708.jpg"
                 alt="Modern Home Appliances"
-                className="w-full h-full object-cover rounded-2xl shadow-sm"
+                className="w-full h-64 sm:h-[500px] object-cover rounded-2xl shadow-sm"
               />
             </div>
             {/* Floating Stat Card */}
