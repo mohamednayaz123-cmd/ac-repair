@@ -54,6 +54,10 @@ export default function About() {
                 <span className="font-bold text-brand-blue-900">+91 96864 45593</span>
               </div>
             </div>
+            
+            <div className="mt-4 p-4 bg-gray-50 rounded-xl border border-gray-100 text-xs text-gray-500 leading-relaxed max-w-2xl">
+              <strong>Disclaimer:</strong> We are an independent AC repair and service provider. We are not associated, affiliated, authorized, endorsed, or sponsored by any AC manufacturer or brand. All brand names, trademarks, and logos belong to their respective owners and are used for identification purposes only.
+            </div>
           </motion.div>
       </div>
     </section>

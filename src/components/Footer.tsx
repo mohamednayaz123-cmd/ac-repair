@@ -58,13 +58,18 @@ export default function Footer() {
 
         </div>
 
-        <div className="border-t border-gray-100 pt-8 mt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[12px] font-bold text-gray-400 uppercase tracking-wide text-center md:text-left">
-            &copy; {new Date().getFullYear()} Customer Care Service Mysore. info@smarthomeservices.com
+        <div className="border-t border-gray-100 pt-8 mt-8 flex flex-col gap-6">
+          <p className="text-xs text-gray-400 leading-relaxed text-center sm:text-left">
+            <strong>Disclaimer:</strong> We are an independent AC repair and service provider. We are not associated, affiliated, authorized, endorsed, or sponsored by any AC manufacturer or brand. All brand names, trademarks, and logos belong to their respective owners and are used for identification purposes only.
           </p>
-          <div className="flex gap-6 text-[12px] font-bold text-gray-400 uppercase tracking-wide">
-            <a href="#" className="hover:text-brand-blue-600 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-brand-blue-600 transition-colors">Terms & Conditions</a>
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-[12px] font-bold text-gray-400 uppercase tracking-wide text-center md:text-left">
+              &copy; {new Date().getFullYear()} Customer Care Service Mysore. info@smarthomeservices.com
+            </p>
+            <div className="flex gap-6 text-[12px] font-bold text-gray-400 uppercase tracking-wide">
+              <a href="#" className="hover:text-brand-blue-600 transition-colors">Privacy Policy</a>
+              <a href="#" className="hover:text-brand-blue-600 transition-colors">Terms & Conditions</a>
+            </div>
           </div>
         </div>
       </div>
