@@ -26,7 +26,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <img src="https://www.customercaremysore.in/logo.jpg" alt="Logo" className="w-10 h-10 object-contain rounded-full shadow-sm" />
+            <img src="https://www.customercaremysore.in/logo.jpg" alt="Logo" className="w-14 h-14 object-contain rounded-full shadow-sm" />
             <div>
               <h1 className="font-display font-bold text-lg leading-none text-brand-blue-900">Customer Care Service Mysore</h1>
               <p className="text-[10px] text-brand-orange-600 font-bold tracking-wider uppercase leading-none mt-1">Fast, Reliable & Affordable</p>
@@ -57,10 +57,10 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 text-gray-600"
+            className="md:hidden p-2.5 bg-brand-blue-50 text-brand-blue-900 rounded-xl hover:bg-brand-blue-100 transition-colors"
             onClick={() => setMobileMenuOpen(true)}
           >
-            <Menu className="w-6 h-6" />
+            <Menu className="w-7 h-7" />
           </button>
         </div>
       </div>

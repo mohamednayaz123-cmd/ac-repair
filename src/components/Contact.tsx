@@ -76,8 +76,8 @@ export default function Contact() {
 
               <div>
                 <label htmlFor="contact_service" className="block text-sm font-medium text-gray-700 mb-1">Appliance Issue</label>
-                <select id="contact_service" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue-500 focus:bg-white transition-colors cursor-pointer text-gray-700" required>
-                  <option value="" disabled selected>Select an option</option>
+                <select id="contact_service" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue-500 focus:bg-white transition-colors cursor-pointer text-gray-700" required defaultValue="">
+                  <option value="" disabled>Select an option</option>
                   <option value="AC">AC Not Cooling/Leaking</option>
                   <option value="Refrigerator">Fridge Not Cooling</option>
                   <option value="WashingMachine">Washing Machine Issue</option>

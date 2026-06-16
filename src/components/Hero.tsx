@@ -40,7 +40,7 @@ export default function Hero() {
               <a href="tel:+919686445593" className="flex items-center justify-center gap-2 px-6 py-3 bg-brand-blue-600 text-white rounded-xl font-bold hover:bg-brand-blue-700 transition-colors shadow-md text-sm w-full sm:w-auto">
                 <Phone className="w-4 h-4" /> Call Now
               </a>
-              <a href="#services" className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 rounded-xl font-bold hover:bg-gray-50 transition-colors shadow-md text-sm w-full sm:w-auto">
+              <a href="#booking-form" className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-900 rounded-xl font-bold hover:bg-gray-50 transition-colors shadow-md text-sm w-full sm:w-auto">
                 <Calendar className="w-4 h-4" /> Book Service
               </a>
             </div>
@@ -52,7 +52,8 @@ export default function Hero() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="lg:col-span-5 xl:col-span-4"
+          className="lg:col-span-5 xl:col-span-4 cursor-default"
+          id="booking-form"
         >
           <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xl relative overflow-hidden">
             <h3 className="text-xl font-bold mb-6 text-brand-blue-900">Quick Booking</h3>
@@ -66,8 +67,8 @@ export default function Hero() {
                 <input type="tel" id="phone" placeholder="Phone Number" className="w-full text-sm p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-brand-blue-500 transition-colors" required />
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <select id="appliance" className="w-full text-sm p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-brand-blue-500 cursor-pointer text-gray-500 transition-colors" required>
-                  <option value="" disabled selected>Select Appliance</option>
+                <select id="appliance" className="w-full text-sm p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-brand-blue-500 cursor-pointer text-gray-500 transition-colors" required defaultValue="">
+                  <option value="" disabled>Select Appliance</option>
                   <option value="AC">AC Repair</option>
                   <option value="Refrigerator">Refrigerator Repair</option>
                   <option value="WashingMachine">Washing Machine Repair</option>

@@ -16,8 +16,8 @@ export default function About() {
           >
             <div className="bg-brand-blue-50 rounded-3xl overflow-hidden p-4 sm:p-6 relative z-10 border border-brand-blue-100">
               <img
-                src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=800&q=80"
-                alt="Appliance Repair Technician"
+                src="/src/assets/images/home_appliances_1781589869708.jpg"
+                alt="Modern Home Appliances"
                 className="w-full h-full object-cover rounded-2xl shadow-sm"
               />
             </div>
