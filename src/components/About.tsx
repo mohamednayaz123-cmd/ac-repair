@@ -4,43 +4,13 @@ import { motion } from 'motion/react';
 export default function About() {
   return (
     <section id="about" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Image Side */}
-          <motion.div
-            initial={{ opacity: 0, lg: { x: -30 } }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative"
-          >
-            <div className="bg-brand-blue-50 rounded-3xl overflow-hidden p-3 sm:p-6 relative z-10 border border-brand-blue-100">
-              <img
-                src="/src/assets/images/home_appliances_1781589869708.jpg"
-                alt="Modern Home Appliances"
-                className="w-full h-64 sm:h-[500px] object-cover rounded-2xl shadow-sm"
-              />
-            </div>
-            {/* Floating Stat Card */}
-            <div className="absolute top-1/2 -right-6 lg:-right-10 transform -translate-y-1/2 bg-white p-5 rounded-2xl shadow-xl border border-gray-100 hidden sm:block z-20">
-              <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-brand-orange-50 text-brand-orange-500 rounded-xl flex items-center justify-center font-bold text-2xl border border-brand-orange-100">
-                  10+
-                </div>
-                <div>
-                  <h4 className="font-bold text-brand-blue-900 leading-tight">Years of</h4>
-                  <p className="text-[11px] text-gray-500 uppercase tracking-widest font-bold">Experience</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Text Content Side */}
           <motion.div
-            initial={{ opacity: 0, lg: { x: 30 } }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6 }}
             className="flex flex-col gap-6"
           >
             <div>
@@ -85,7 +55,6 @@ export default function About() {
               </div>
             </div>
           </motion.div>
-        </div>
       </div>
     </section>
   );
