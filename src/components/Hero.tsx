@@ -57,17 +57,28 @@ export default function Hero() {
         >
           <div className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xl relative overflow-hidden">
             <h3 className="text-xl font-bold mb-6 text-brand-blue-900">Quick Booking</h3>
-            <form className="flex flex-col gap-4 text-gray-800" onSubmit={(e) => e.preventDefault()}>
+            <form className="flex flex-col gap-4 text-gray-800" onSubmit={(e) => {
+              e.preventDefault();
+              const formData = new FormData(e.currentTarget);
+              const name = formData.get('name');
+              const phone = formData.get('phone');
+              const appliance = formData.get('appliance');
+              const address = formData.get('address');
+              
+              const text = `Hi, I would like to book a service.\n\nName: ${name}\nPhone: ${phone}\nAppliance: ${appliance}\nArea: ${address}`;
+              const whatsappUrl = `https://wa.me/919686445593?text=${encodeURIComponent(text)}`;
+              window.open(whatsappUrl, '_blank');
+            }}>
               <div>
                 <label htmlFor="name" className="sr-only">Name</label>
-                <input type="text" id="name" placeholder="Full Name" className="w-full text-sm p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-brand-blue-500 transition-colors" required />
+                <input type="text" id="name" name="name" placeholder="Full Name" className="w-full text-sm p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-brand-blue-500 transition-colors" required />
               </div>
               <div>
                 <label htmlFor="phone" className="sr-only">Phone Number</label>
-                <input type="tel" id="phone" placeholder="Phone Number" className="w-full text-sm p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-brand-blue-500 transition-colors" required />
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" className="w-full text-sm p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-brand-blue-500 transition-colors" required />
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <select id="appliance" className="w-full text-sm p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-brand-blue-500 cursor-pointer text-gray-500 transition-colors" required defaultValue="">
+                <select id="appliance" name="appliance" className="w-full text-sm p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-brand-blue-500 cursor-pointer text-gray-500 transition-colors" required defaultValue="">
                   <option value="" disabled>Select Appliance</option>
                   <option value="AC">AC Repair</option>
                   <option value="Refrigerator">Refrigerator Repair</option>
@@ -77,7 +88,7 @@ export default function Hero() {
                   <option value="Dishwasher">Dishwasher Repair</option>
                   <option value="Other">Other</option>
                 </select>
-                <input type="text" id="address" placeholder="Your Area" className="w-full text-sm p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-brand-blue-500 transition-colors" required />
+                <input type="text" id="address" name="address" placeholder="Your Area" className="w-full text-sm p-4 bg-gray-50 border border-gray-200 rounded-xl outline-none focus:border-brand-blue-500 transition-colors" required />
               </div>
               <button type="submit" className="w-full bg-brand-blue-700 text-white font-bold py-4 rounded-xl hover:bg-brand-blue-800 shadow-md transition-colors mt-2">
                 Get a Callback

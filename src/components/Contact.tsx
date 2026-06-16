@@ -62,21 +62,32 @@ export default function Contact() {
           {/* Contact Form */}
           <div className="p-8 lg:p-12 pl-lg-0 relative">
             <h3 className="font-display text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-5" onSubmit={(e) => {
+              e.preventDefault();
+              const formData = new FormData(e.currentTarget);
+              const name = formData.get('contact_name');
+              const phone = formData.get('contact_phone');
+              const service = formData.get('contact_service');
+              const message = formData.get('contact_message');
+              
+              const text = `Hi, I have an inquiry.\n\nName: ${name}\nPhone: ${phone}\nIssue: ${service}\nMessage: ${message}`;
+              const whatsappUrl = `https://wa.me/919686445593?text=${encodeURIComponent(text)}`;
+              window.open(whatsappUrl, '_blank');
+            }}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                   <label htmlFor="contact_name" className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
-                  <input type="text" id="contact_name" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue-500 focus:bg-white transition-colors" placeholder="John Doe" required />
+                  <input type="text" id="contact_name" name="contact_name" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue-500 focus:bg-white transition-colors" placeholder="John Doe" required />
                 </div>
                 <div>
                   <label htmlFor="contact_phone" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-                  <input type="tel" id="contact_phone" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue-500 focus:bg-white transition-colors" placeholder="+91 XXXXX XXXXX" required />
+                  <input type="tel" id="contact_phone" name="contact_phone" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue-500 focus:bg-white transition-colors" placeholder="+91 XXXXX XXXXX" required />
                 </div>
               </div>
 
               <div>
                 <label htmlFor="contact_service" className="block text-sm font-medium text-gray-700 mb-1">Appliance Issue</label>
-                <select id="contact_service" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue-500 focus:bg-white transition-colors cursor-pointer text-gray-700" required defaultValue="">
+                <select id="contact_service" name="contact_service" className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue-500 focus:bg-white transition-colors cursor-pointer text-gray-700" required defaultValue="">
                   <option value="" disabled>Select an option</option>
                   <option value="AC">AC Not Cooling/Leaking</option>
                   <option value="Refrigerator">Fridge Not Cooling</option>
@@ -89,7 +100,7 @@ export default function Contact() {
 
               <div>
                 <label htmlFor="contact_message" className="block text-sm font-medium text-gray-700 mb-1">Detailed Message</label>
-                <textarea id="contact_message" rows={4} className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue-500 focus:bg-white transition-colors resize-none" placeholder="Describe the problem with your appliance..." required></textarea>
+                <textarea id="contact_message" name="contact_message" rows={4} className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue-500 focus:bg-white transition-colors resize-none" placeholder="Describe the problem with your appliance..." required></textarea>
               </div>
 
               <button type="submit" className="w-full flex justify-center items-center gap-2 px-6 py-4 bg-brand-blue-600 text-white rounded-lg font-bold text-lg hover:bg-brand-blue-700 transition-colors shadow-lg shadow-brand-blue-600/30 group">
