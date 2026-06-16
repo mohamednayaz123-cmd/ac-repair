@@ -6,9 +6,8 @@ export default function About() {
     <section id="about" className="py-24 relative overflow-hidden">
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center bg-fixed" 
-        style={{ backgroundImage: 'url(/src/assets/images/home_appliances_1781589869708.jpg)' }}
+        style={{ backgroundImage: 'url(/src/assets/images/kitchen_appliances_bg_1781599138016.jpg)' }}
       >
-        <div className="absolute inset-0 bg-gray-900/80 backdrop-blur-[2px]"></div>
       </div>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-white">
           {/* Text Content Side */}
@@ -17,7 +16,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col gap-6 p-8 md:p-12"
+            className="flex flex-col gap-6 p-8 md:p-12 bg-gray-900/60 backdrop-blur-md rounded-[2.5rem] shadow-2xl border border-white/10 mt-8"
           >
             <div>
               <h4 className="text-[11px] font-bold uppercase text-brand-orange-500 mb-3 tracking-widest">About Our Company</h4>
