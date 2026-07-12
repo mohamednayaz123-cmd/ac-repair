@@ -18,8 +18,8 @@ export default function Hero() {
               <ShieldCheck className="w-4 h-4" /> Trusted & Certified Experts
             </span>
             <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-5xl xl:text-6xl leading-tight mb-6 relative z-10">
-              Expert Home Appliance <br className="hidden md:block"/>
-              <span className="text-brand-orange-500">Repair Services</span>
+              Service Center <br className="hidden md:block"/>
+              <span className="text-brand-orange-500">Mysore</span>
             </h1>
             <p className="text-brand-blue-200 text-lg mb-8 max-w-xl leading-relaxed relative z-10">
               Same-Day Service for AC, Refrigerator, Washing Machine, Microwave, and LED TV at your doorstep.
